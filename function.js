@@ -79,3 +79,44 @@ if(input[i]<0){
 
 }
 console.log(countPositivesSumNegatives([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]));
+
+
+function makeUpperCase(str) {
+  return str.toUpperCase();
+  // Code here
+}
+console.log(makeUpperCase("sonam"));
+
+
+function twoDecimalPlaces(n) {
+  // Your code here
+  return Math.ceil(n);
+}
+console.log(twoDecimalPlaces(5.7566666));
+
+function formatNumbers(n) {
+  return Number(n.toFixed(2));
+}
+console.log(formatNumbers(1.23455));
+
+
+
+function points(games) {
+  let totalPoints = 0;
+
+  for (let i = 0; i < games.length; i++) {
+    let [x, y] = games[i].split(':').map(Number);
+
+    if (x > y) {
+      totalPoints += 3; // win
+    } else if (x === y) {
+      totalPoints += 1; // tie
+    }
+    // No points for a loss (x < y)
+  }
+
+  return totalPoints;
+}
+console.log(points([2,4,5,9,44,7,22,10,9,6,8,11]));
+
+
