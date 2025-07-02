@@ -209,9 +209,58 @@ function strCount(str, letter){
   let result = 0;
   for(let i=0; i<str.length; i++){
     if(str[i]===letter){
-      result += str.length;
+      result += str[i].length;
     }
   }
   return result;
 }
 console.log(strCount("hello","o"));
+
+function monkeyCount(n) {
+  let count = [];
+  for (let i=1; i<=n; i++){
+    count.push(i);
+  }
+  return count;
+// your code here
+}
+console.log(monkeyCount(10));
+
+function removeEveryWord(arr) {
+  let result = [];
+  for (let i = 0; i < arr.length; i += 2) {
+    result.push(arr[i]);
+  }
+  return result;
+}
+console.log(removeEveryWord(["hello","hi","he again"]));
+
+function doubleInteger(i) {
+  return i+i;
+}
+console.log(doubleInteger(3));
+
+
+function getAge(inputString){
+// return the girl's correct age as an integer. Happy coding :) 
+  
+  //return x;
+  return inputString[0];
+}
+console.log(getAge("4 year old"))
+
+
+function sumStr(a,b) {
+    let min = Number(a);
+    let max = Number(b);
+  let sum =  min + max;
+
+  return sum.toString();
+}
+console.log(sumStr("4","6"));
+
+function reverseWords(str){
+  
+  return str.split(" ").reverse().join(" "); // reverse those words
+}
+console.log(reverseWords("The greatest victory is that which requires no battle"));
