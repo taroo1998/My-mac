@@ -101,23 +101,23 @@ console.log(formatNumbers(1.23455));
 
 
 
-function points(games) {
-  let totalPoints = 0;
+// function points(games) {
+//   let totalPoints = 0;
 
-  for (let i = 0; i < games.length; i++) {
-    let [x, y] = games[i].split(':').map(Number);
+//   for (let i = 0; i < games.length; i++) {
+//     let [x, y] = games[i].split(':').map(Number);
 
-    if (x > y) {
-      totalPoints += 3; // win
-    } else if (x === y) {
-      totalPoints += 1; // tie
-    }
-    // No points for a loss (x < y)
-  }
+//     if (x > y) {
+//       totalPoints += 3; // win
+//     } else if (x === y) {
+//       totalPoints += 1; // tie
+//     }
+//     // No points for a loss (x < y)
+//   }
 
-  return totalPoints;
-}
-console.log(points([2,4,5,9,44,7,22,10,9,6,8,11]));
+//   return totalPoints;
+// }
+// console.log(points([2,4,5,9,44,7,22,10,9,6,8,11]));
 
 
 function divisibleBy(numbers, divisor){
@@ -143,3 +143,75 @@ for (let i=start; i<=end; i++){
   return result;
 }
 console.log(between(2,5));
+
+function correct(string){
+  let result = "";
+  for (let i=0; i<string.length; i++){
+     if( string[i] === "5"){
+       result += "S";
+       }
+    else if (string[i]=== "0"){
+      result += "O";
+       }
+    else if(string[i]=== "1"){
+      result += "I";
+    }
+    else{
+      result += string[i];
+    }
+
+   }
+  return result;
+}
+console.log(correct("L0ND0N"));
+
+
+function goals (laLigaGoals, copaDelReyGoals, championsLeagueGoals) {
+  // code goes here
+  return laLigaGoals + copaDelReyGoals +championsLeagueGoals;
+}
+console.log(goals(4,5,6));
+
+function twiceAsOld(dadYearsOld, sonYearsOld) {
+  // your code here
+  let result = 0;
+  for (let i=sonYearsOld; i<=dadYearsOld; i++){
+    if(dadYearsOld % sonYearsOld === 0){
+        result += 0
+  }
+  else{
+    result += 1
+  }
+}
+  return result;
+  
+}
+console.log(twiceAsOld(50,20));
+
+
+function twiceAsOld(dadYearsOld, sonYearsOld) {
+   return Math.abs(dadYearsOld - 2 * sonYearsOld);
+}
+console.log(twiceAsOld(50,20));
+
+
+function cockroachSpeed(s) {
+  return s*100000;
+}
+console.log(cockroachSpeed(1.08));
+
+
+function cockroachSpeed(s) {
+  return Math.floor(s*100000/3600);
+}
+
+function strCount(str, letter){  
+  let result = 0;
+  for(let i=0; i<str.length; i++){
+    if(str[i]===letter){
+      result += str.length;
+    }
+  }
+  return result;
+}
+console.log(strCount("hello","o"));
