@@ -132,3 +132,14 @@ function divisibleBy(numbers, divisor){
 }
 console.log(divisibleBy([1,2,3,4,5,6,7,8],2));
 
+function between(a, b) {
+  // your code here
+  let result =[];
+  let start= Math.min(a,b);
+  let end = Math.max(a,b);
+for (let i=start; i<=end; i++){
+    result.push(i);
+  }
+  return result;
+}
+console.log(between(2,5));
