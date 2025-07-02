@@ -264,3 +264,23 @@ function reverseWords(str){
   return str.split(" ").reverse().join(" "); // reverse those words
 }
 console.log(reverseWords("The greatest victory is that which requires no battle"));
+
+function maps(x){
+ let result = [];
+  for(let i=0; i<x.length; i++){
+    result.push(x[i]*2);
+  }
+  return result;
+}
+console.log(maps([1,2,3]))
+
+function enough(cap, on, wait) {
+  if (on + wait <= cap){
+    return 0;
+  }
+  if(on +wait != cap ){
+     return (on + wait) - cap;
+  }
+
+}
+console.log(enough(100,60,50));
